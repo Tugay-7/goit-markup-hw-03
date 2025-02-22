@@ -26,6 +26,7 @@ body {
   text-transform: uppercase;
   color: #4d5ae5;
   font-weight: 700;
+  margin-right: 76px;
 }
 
 .studio-text {
@@ -53,6 +54,11 @@ body {
   font-style: normal;
 }
 
+.contact-info .contact-list {
+  display: flex;
+  gap: 40px;
+}
+
 .contact-link {
   font-size: 16px;
   line-height: 1.5;
@@ -67,6 +73,13 @@ body {
 
 .first-section {
   background-color: #2e2f42;
+  padding: 188px 0;
+}
+
+.first-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-heading {
@@ -75,6 +88,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
+  max-width: 496px;
 }
 
 .first-section .btn_submit_form {
@@ -99,6 +113,7 @@ body {
 
 .second-section {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .section-heading {
@@ -116,6 +131,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .approach-description {
@@ -125,8 +141,18 @@ body {
   color: #434455;
 }
 
+.approach-list {
+  display: flex;
+  gap: 24px;
+}
+
+.approach-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .third-section {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .team-heading {
@@ -135,6 +161,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 
 .team-description {
@@ -146,10 +173,27 @@ body {
 
 .team-item {
   background-color: #FFFFFF;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
 }
 
 .team-list {
   justify-content: space-between;
+  display: flex;
+  gap: 24px;
+}
+
+.team-info {
+  padding: 32px 0;
+}
+
+.team-name {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-title {
+  text-align: center;
 }
 
 .portfolio-heading {
@@ -204,16 +248,36 @@ a {
 /* Header Styles */
 header {
   background-color: #f8f8f8;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-main {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+}
+
+.nav-main {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-item {
+  padding: 24px 0;
 }
 
 nav a {
   font-weight: 700;
 }
 
-
-
 /* Main Content Styles */
-
 
 section {
   margin-bottom: 2em;
@@ -255,8 +319,6 @@ section ul li img {
   margin: 0 auto 1em;
 }
 
-
-
 .portfolio-item-heading {
   font-weight: 500;
   font-size: 20px;
@@ -275,9 +337,16 @@ section ul li img {
 /* Footer Styles */
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-text {
+  max-width: 264px;
   line-height: 1.5;
   color: #F4F4FD;
   letter-spacing: 0.02em;
@@ -298,3 +367,221 @@ btn_submit_form:hover,
 btn_submit_form:focus {
   color: #0056b3;
 }
+
+/* B1: Global reset for h1...h6, p, and ul */
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* B2: Elements should not have margins that disrupt container layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* B3: Use margin for vertical spacing between adjacent elements */
+section + section {
+  margin-top: 2em;
+}
+
+/* B4: Use padding for spacing between content and its border */
+section {
+  padding: 2em 0;
+}
+
+/* B5: Adjust margins and paddings according to the layout */
+header, footer, section {
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+/* B6: Create a common .container helper class */
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 1158px;
+  padding: 0 15px;
+}
+
+/* B9: Apply .container class to main content wrappers */
+header .container,
+footer .container,
+section .container {
+  padding: 0;
+}
+
+/* B10: Use Flexbox for necessary elements */
+header nav ul,
+.team-list,
+.portfolio-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* B11: Ensure all block elements match the design layout */
+header, footer, section {
+  width: 100%;
+}
+
+/* B12: Elements should not have fixed height */
+header, footer, section {
+  height: auto;
+}
+
+/* B13: Header should have a bottom border */
+header {
+  border-bottom: 1px solid #ccc;
+}
+
+/* B14: Sections should stack like a book without external margins */
+section {
+  margin: 0;
+}
+
+/* B15: Sections should have 120px top and bottom padding */
+.section {
+  padding: 120px 0;
+}
+
+/* B16: Portfolio cards should have a bottom border */
+.portfolio-item {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Set display: block for all img elements */
+img {
+  display: block;
+}
+
+/* First Section Styles */
+.first-section {
+  padding: 188px 0;
+}
+
+.first-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-heading {
+  max-width: 496px;
+}
+
+.btn-submit-form {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Second Section Styles */
+.second-section {
+  padding: 120px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.approach-list {
+  display: flex;
+  gap: 24px;
+}
+
+.approach-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.approach-heading {
+  margin-bottom: 8px;
+}
+
+/* Third Section Styles */
+.third-section {
+  padding: 120px 0;
+}
+
+.team-heading {
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-item {
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
+}
+
+.team-info {
+  padding: 32px 0;
+}
+
+.team-name {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-title {
+  text-align: center;
+}
+
+/* Fourth Section Styles */
+.fourth-section {
+  padding: 120px 0;
+}
+
+.portfolio-heading {
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.portfolio-info {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  margin-bottom: 8px;
+}
+
+.portfolio-name {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.portfolio-category {
+  text-align: center;
+}
+
+/* Set display: block for all img elements */
+img {
+  display: block;
+}
+
+/* Other existing styles... */
