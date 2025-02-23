@@ -257,6 +257,7 @@ header {
 
 .header-container {
   display: flex;
+  padding: 0 15px;
 }
 
 .nav-main {
@@ -357,7 +358,7 @@ section ul li img {
 }
 
 .footer-studio-text {
-  color: #f4f4fd;
+  color: #ffffff;
 }
 
 /* Interactive Elements */
@@ -526,7 +527,7 @@ img {
 }
 
 .team-item {
-  width: calc((100% - 72px) / 4);
+  flex-basis: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
 }
 
