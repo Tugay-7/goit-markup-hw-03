@@ -585,4 +585,22 @@ img {
   display: block;
 }
 
+/* Footer Styles */
+.footer-main {
+  padding: 100px 0;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-studio-text {
+  color: #ffffff;
+}
+
+.footer-description {
+  max-width: 264px;
+}
+
 /* Other existing styles... */
