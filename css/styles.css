@@ -276,7 +276,7 @@ header {
   gap: 40px;
 }
 
-.nav-item {
+.nav-item .nav-link home-link {
   padding: 24px 0;
 }
 
