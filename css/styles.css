@@ -270,7 +270,7 @@ header {
   gap: 40px;
 }
 
-.nav-item {
+.nav-list .nav-item {
   padding: 24px 0;
 }
 
@@ -522,6 +522,19 @@ img {
   margin-bottom: 8px;
 }
 
+@media (max-width: 768px) {
+  .approach-item {
+    flex-basis: calc((100% - 24px) / 2); /* Mobilde 2 sütun */
+  }
+}
+
+@media (max-width: 480px) {
+  .approach-item {
+    flex-basis: 100%; /* Küçük ekranlarda tam genişlik */
+  }
+}
+
+
 /* Third Section Styles */
 .third-section {
   padding: 120px 0;
@@ -571,6 +584,8 @@ img {
 }
 
 .portfolio-item {
+  display: flex;
+  flex-direction: column;
   width: calc((100% - 72px) / 4);
 }
 
