@@ -276,7 +276,7 @@ header {
   gap: 40px;
 }
 
-.nav-list .nav-item {
+.nav-item {
   padding: 24px 0;
 }
 
@@ -408,7 +408,6 @@ header, footer, section {
 .container {
   max-width: 1158px;
   margin: 0 auto;
-  padding: 0 1em;
   width: 1158px;
   padding: 0 15px;
 }
