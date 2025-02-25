@@ -51,10 +51,14 @@ body {
 }
 
 .contact-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-style: normal;
 }
 
 .contact-info .contact-list {
+  padding: 0 180px;
   display: flex;
   gap: 40px;
 }
@@ -156,9 +160,10 @@ body {
 }
 
 .team-heading {
+  padding: 0 490px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 72px;
@@ -252,6 +257,7 @@ header {
 }
 
 .header-main {
+  padding: 0 20px;
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -503,10 +509,10 @@ img {
 
 .approach-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 24px;
   padding: 0;
-  list-style: none;
+  list-style:none ;
 }
 
 .approach-item {
