@@ -276,7 +276,8 @@ header {
   gap: 40px;
 }
 
-.nav-item .nav-link home-link {
+.nav-item .nav-link,
+.nav-item .home-link {
   padding: 24px 0;
 }
 
@@ -416,7 +417,7 @@ header, footer, section {
 header .container,
 footer .container,
 section .container {
-  padding: 0;
+  padding: 0 15px;
 }
 
 /* B10: Use Flexbox for necessary elements */
