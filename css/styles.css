@@ -503,12 +503,19 @@ img {
 
 .approach-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  padding: 0;
+  list-style: none;
 }
 
 .approach-item {
   width: calc((100% - 72px) / 4);
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .approach-heading {
